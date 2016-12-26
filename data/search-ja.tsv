@@ -1,0 +1,5 @@
+Query	Mroonga	"N hits(Mroonga)"	"InnoDB ngram"	"N hits(InnoDB ngram)"	"InnoDB MeCab"	"N hits(InnoDB MeCab)"
+"PostgreSQL\nOR\nMySQL"	0.02	368	NaN	NaN	0.005	368
+データベース	0.09	17180	36	17180	0.03	16108
+テレビアニメ	0.1	22954	182	22954	380	33525
+日本	0.2	627724	1.2	627724	1.3	568978

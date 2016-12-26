@@ -1,0 +1,44 @@
+= Mroongaの紹介
+
+: author
+   クリアコード
+: theme
+   clear-code
+
+= MySQLの課題
+
+  * (('wait'))組込全文検索機能
+    * 5.6から日本語対応だが遅い
+
+(('wait'))
+(('tag:center'))
+↓\n
+Mroonga：日本語対応で速い
+
+= 速度
+
+  # image
+  # src = images/search-mroonga-innodb.pdf
+  # relative_width = 100
+
+== スライドプロパティ
+
+: enable-title-on-image
+   false
+
+= 速い理由
+
+高速な\n
+フレーズ検索\n
+(('note:フレーズ検索：連続した単語を検索（日本語全文検索では必須）'))\n
+(('note:例：「テレビアニメ」=「テレビ」+「アニメ」が連続'))
+
+= さらに速い
+
+  * よく使うSQLを最適化
+    * (({COUNT(*)}))\n
+      →不要な列を読まない
+    * (({ORDER BY LIMIT}))\n
+      →不要な行を読まない
+  * 更新中も検索性能の劣化がない
+    * 更新中も検索処理をブロックしない
